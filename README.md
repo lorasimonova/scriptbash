@@ -14,7 +14,7 @@
 
 ## Использование 
 
-  chmod +x test_arg.sh
+  <chmod +x test_arg.sh
   ./test_arg.sh
   chmod +x test_even_odd.sh
   ./test_even_odd.sh
@@ -23,4 +23,4 @@
   chmod +x test_script_even.sh
   ./test_script_even.sh
   chmod +x test_script_odd.sh
-  ./test_script_odd.sh
+  ./test_script_odd.sh>
