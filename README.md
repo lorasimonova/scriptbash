@@ -4,7 +4,7 @@
 ## Загрузка
 git clone https://github.com/lorasimonova/scriptbash.git
 chmod +x scripttt.sh
-./scripttt.sh
+./scripttt.sh fff.txt ggg.txt четное/нечетное
 
 
 # Тесты
