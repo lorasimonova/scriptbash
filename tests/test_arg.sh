@@ -1,6 +1,6 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
-result=`../scripttt.sh ggg`
+result=`../scripttt.sh`
 expected="no arguments"
 if [[ $result == $expected ]]
 then    
