@@ -1,15 +1,21 @@
 #!/bin/bash
 
-if [[ ! -n $3 ]] && [[ ! -n $1 ]] && [[ ! -n $2 ]]
-then
-    echo "no arguments"
-    exit 1
-fi 
-if [[ ! -f $1 ]] && [[ ! -f $2 ]]
-then  
-    echo "failed arguments"
-    exit 1
-fi 
+while [[ $# - gt 0 ]]; do
+    case "$1" in 
+    -i)
+        input_file=$2
+        shift 2
+        ;; 
+    -o) 
+        output_file=$2
+        shift 2
+        ;; 
+    *)
+        echo "не верный аргумент $1" >&2
+        exit 1 
+        ;;
+    esac
+done 
 
 if [[ $3 == "четное" ]]
 then 
