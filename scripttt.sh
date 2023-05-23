@@ -9,16 +9,17 @@ while [[ $# -gt 0 ]]; do
     -o) 
         output_file=$2
         shift 2
-        ;; 
+        ;;
     *)
         3rd="$1"
     esac
 done 
 
+
 if [[ "$3rd" == "четное" ]]
 then 
     count=0
-    for line in $(cat $1)
+    for line in $(cat $input_file)
     do
         for arr in $line 
         do
@@ -31,7 +32,7 @@ then
 elif [[ "$3rd" == "нечетное" ]] 
     then
     count=0
-    for line in $(cat $1)
+    for line in $(cat $input_file)
     do
         for arr in $line 
         do
@@ -46,4 +47,4 @@ else
     echo "не правильный ввод"
     exit 1
 fi
-echo "$count" >> $2
+echo "$count" >> $output_file
