@@ -11,9 +11,7 @@ while [[ $# - gt 0 ]]; do
         shift 2
         ;; 
     *)
-        echo "не верный аргумент $1" >&2
-        exit 1 
-        ;;
+        3rd="$1"
     esac
 done 
 
