@@ -15,7 +15,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done 
 
-if [[ $3rd == "четное" ]]
+if [[ "$3rd" == "четное" ]]
 then 
     count=0
     for line in $(cat $1)
@@ -28,7 +28,7 @@ then
             fi
         done
     done
-elif [[ $3rd == "нечетное" ]] 
+elif [[ "$3rd" == "нечетное" ]] 
     then
     count=0
     for line in $(cat $1)
