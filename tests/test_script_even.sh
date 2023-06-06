@@ -1,8 +1,8 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
-../scripttt.sh fff.txt ggg.txt четное
+../scripttt.sh -i fff.txt -o ggg.txt четное
 result=$(awk 'END{print}' ggg.txt)
-expected="4"
+expected="6"
 if [[ $result == $expected ]]
 then
     echo "test for even passed"
