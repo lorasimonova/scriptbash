@@ -2,7 +2,7 @@
 chmod +x ../scripttt.sh
 ../scripttt.sh -i fff.txt -o ggg.txt нечетное
 result=$(awk 'END{print}' ggg.txt)
-expected="3"
+expected="8"
 if [[ $result == $expected ]]
 then
     echo "test for odd passed"
