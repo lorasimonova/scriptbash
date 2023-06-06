@@ -1,7 +1,7 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
 result=`../scripttt.sh -i fff.txt -o ggg.txt алалалал`
-expected="не правильный ввод"
+expected="неправильный ввод"
 if [[ $result == $expected ]]
 then
     echo "test for even and odd number passed"
