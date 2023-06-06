@@ -1,7 +1,7 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
-result=`../scripttt.sh qgioeakmdlv qgijoadk`
-expected="failed arguments"
+result=`../scripttt.sh -i qgioeakmdlv -o qgijoadk`
+expected="no file"
 if [[ $result == $expected ]]
 then
     echo "test for file passed"
