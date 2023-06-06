@@ -1,6 +1,6 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
-../scripttt.sh fff.txt ggg.txt нечетное
+../scripttt.sh -i fff.txt -o ggg.txt нечетное
 result=$(awk 'END{print}' ggg.txt)
 expected="3"
 if [[ $result == $expected ]]
