@@ -11,40 +11,49 @@ while [[ $# -gt 0 ]]; do
         shift 2
         ;;
     *)
-        3rd="$1"
+    if [[ -z $third ]]; then
+        third="$1"
+    fi
+    shift
+    ;;
     esac
 done 
+if [[ ! -f $input_file ]]; then
+    echo "no file"
+    exit 3
+fi
+if [[ ! -f $output_file ]]; then
+touch $output_file
+fi
 
-
-if [ "$3rd" == "четное" ]
+if [[ "$third" == "четное" ]]
 then 
     count=0
-    for line in $(cat $input_file)
+    while read line
     do
         for arr in $line 
         do
-            if [[ $(($arr % 2)) -eq 0 ]] 
+            if [[ $((arr % 2)) -eq 0 ]] 
             then 
                 count=$((count+1))
             fi
         done
-    done
-elif [ "$3rd" == "нечетное" ]
-    then
+    done < "$input_file"
+elif [[ "$third" == "нечетное" ]] 
+then
     count=0
-    for line in $(cat $input_file)
+    while read line
     do
         for arr in $line 
         do
-            if [[ $(($arr % 2)) -ne 0 ]] 
+            if [[ $((arr % 2)) -ne 0 ]] 
             then 
                 count=$((count+1))
             fi
         done
-    done
-    
+    done < "$input_file"
 else
-    echo "не правильный ввод"
+    echo "неправильный ввод"
     exit 1
 fi
-echo "$count" >> $output_file
+echo "$count" >> "$output_file"
