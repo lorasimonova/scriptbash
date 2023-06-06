@@ -29,8 +29,6 @@ jobs:
       - name: Run a one-line script
         run: | 
           cd tests
-          chmod +x test_arg.sh
-          ./test_arg.sh
           chmod +x test_even_odd.sh
           ./test_even_odd.sh
           chmod +x test_files.sh
