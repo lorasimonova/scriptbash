@@ -1,6 +1,6 @@
 #!/bin/bash
 chmod +x ../scripttt.sh
-result=`../scripttt.sh fff.txt ggg.txt алалалал`
+result=`../scripttt.sh -i fff.txt -o ggg.txt алалалал`
 expected="не правильный ввод"
 if [[ $result == $expected ]]
 then
